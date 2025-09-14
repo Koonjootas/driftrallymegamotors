@@ -2,7 +2,7 @@ name: RSS → Telegram (hourly)
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: "0 * * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -22,7 +22,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install deps
         run: |
@@ -50,6 +50,12 @@ jobs:
         run: |
           git config user.email "actions@github.com"
           git config user.name "github-actions"
-          git add storage/news_state.json logs/*.log || true
+          # подтянем свежие коммиты, если параллельно были изменения
+          git pull --rebase || true
+          # добавляем state (он не в .gitignore)
+          git add storage/news_state.json
+          # форсим логи, они в .gitignore
+          git add -f logs/*.log || true
+          # коммитим, если есть изменения
           git commit -m "chore: update state & logs [skip ci]" || echo "Nothing to commit"
-          git push
+          git push || echo "Nothing to push"

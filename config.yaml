@@ -4,6 +4,16 @@ max_posts_per_run: 12 # don't spam the channel in one run
 dedupe_window_days: 21 # how far back to keep seen IDs
 post_format: html # html | markdown
 
+seen_guids = set()
+uniq = []
+for it in fresh:
+    if it.guid in seen_guids:
+        continue
+    seen_guids.add(it.guid)
+    uniq.append(it)
+pending.extend(uniq)
+
+
 sources:
   - id: "silkwayrally"
     type: "rss"

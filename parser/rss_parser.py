@@ -9,8 +9,42 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 from urllib.parse import urlparse
+import re
+from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode, urljoin
 
 log = logging.getLogger("runner")
+
+TRACKING_PREFIXES = ("utm_", "fbclid", "gclid", "yclid", "mc_cid", "mc_eid", "igshid", "_hs")
+
+def _normalize_url(u: str) -> str:
+    if not u:
+        return ""
+    parts = urlsplit(u)
+    scheme = parts.scheme.lower() or "https"
+    netloc = parts.netloc.lower()
+    # убираем лишние слеши в конце пути (оставим один, но обычно лучше без)
+    path = parts.path.rstrip("/")
+    # чистим query от трекинга
+    clean_q = [(k, v) for k, v in parse_qsl(parts.query, keep_blank_values=True)
+            if not any(k.lower().startswith(p) for p in TRACKING_PREFIXES)]
+    query = urlencode(clean_q, doseq=True)
+    return urlunsplit((scheme, netloc, path, query, ""))
+
+def _stable_guid(feed_url: str, entry) -> tuple[str, str]:
+    # 1) абсолютная ссылка
+    raw_link = (getattr(entry, "link", "") or "").strip()
+    if raw_link:
+        abs_link = urljoin(feed_url, raw_link)
+        norm = _normalize_url(abs_link)
+        if norm:
+            return norm, abs_link
+    # 2) fallback: id/guid
+    fallback = (getattr(entry, "id", None) or getattr(entry, "guid", None) or "").strip()
+    if fallback:
+        return f"id:{fallback}", raw_link or fallback
+    # 3) совсем fallback
+    t = (getattr(entry, "title", "") or "").strip()
+    return f"titlelink:{t}|{raw_link}", raw_link or t
 
 DEFAULT_HEADERS = {
     "User-Agent": (
@@ -114,25 +148,18 @@ def parse_datetime_struct(entry):
 
 def fetch_items(source_id: str, url: str, cap: int = 30) -> List[NewsItem]:
     fp = _parse_feed(url)
-
-    if getattr(fp, "bozo", 0):
-        log.warning(f"{source_id}: feedparser bozo_exception: {getattr(fp, 'bozo_exception', None)}")
-
     items: List[NewsItem] = []
     for e in fp.entries[:cap]:
         published_dt = parse_datetime_struct(e)
         published_iso = published_dt.isoformat() if published_dt else None
-        guid = getattr(e, "id", None) or getattr(e, "guid", None) or getattr(e, "link", None) or (
-            (getattr(e, "title", "") or "") + "|" + (getattr(e, "link", "") or "")
-        )
+        guid, abs_link = _stable_guid(url, e)   # ← СТАБИЛЬНЫЙ GUID и абсолютный link
         items.append(NewsItem(
             source_id=source_id,
             title=(getattr(e, "title", "(no title)") or "").strip(),
-            link=(getattr(e, "link", "") or "").strip(),
+            link=abs_link,
             summary=(getattr(e, "summary", "") or getattr(e, "description", "") or ""),
             published=published_iso,
-            guid=str(guid),
+            guid=guid,
         ))
-
-    log.info(f"{source_id}: parsed entries={len(items)}")
     return items
+
