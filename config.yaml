@@ -1,0 +1,17 @@
+# General settings
+max_items_per_source: 30 # guardrail if a feed is huge
+max_posts_per_run: 12 # don't spam the channel in one run
+dedupe_window_days: 21 # how far back to keep seen IDs
+post_format: html # html | markdown
+
+sources:
+  - id: "silkwayrally"
+    type: "rss"
+    url: "https://silkwayrally.com/news-ru/feed/"
+    enabled: true
+    expand_full_article: true
+
+  - id: "vdrifte"
+    type: "rss"
+    url: "http://vdrifte.ru/rss"
+    enabled: true
