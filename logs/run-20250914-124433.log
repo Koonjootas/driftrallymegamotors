@@ -1,0 +1,85 @@
+2025-09-14 12:44:33,344 | INFO | Start run
+2025-09-14 12:44:33,344 | INFO | CWD: /home/runner/work/driftrallymegamotors/driftrallymegamotors
+2025-09-14 12:44:33,346 | INFO | Loaded sources: 2
+2025-09-14 12:44:33,346 | INFO | source -> id=silkwayrally type=rss enabled=True url=https://silkwayrally.com/news-ru/feed/ expand_full=True
+2025-09-14 12:44:33,346 | INFO | source -> id=vdrifte type=rss enabled=True url=http://vdrifte.ru/rss expand_full=False
+2025-09-14 12:44:33,346 | INFO | [1/2] BEGIN silkwayrally (type=rss)
+2025-09-14 12:44:33,346 | INFO | Fetching RSS: silkwayrally https://silkwayrally.com/news-ru/feed/
+2025-09-14 12:44:34,759 | INFO | GET https://silkwayrally.com/news-ru/feed/ → 200 Content-Type=text/html
+2025-09-14 12:44:34,760 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:35,454 | INFO | RETRY with beget cookie https://silkwayrally.com/news-ru/feed/ → 200 Content-Type=text/xml;charset=UTF-8
+2025-09-14 12:44:36,288 | INFO | GET(article) https://silkwayrally.com/ralli-shelkovyj-put-2016-v-pogone-za-belym-tigrom/ → 200 Content-Type=text/html
+2025-09-14 12:44:36,288 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:36,594 | INFO | RETRY(article) https://silkwayrally.com/ralli-shelkovyj-put-2016-v-pogone-za-belym-tigrom/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:37,185 | INFO | GET(article) https://silkwayrally.com/vladimir-chagin-vystupil-na-vostochnom-ekonomicheskom-forume-2/ → 200 Content-Type=text/html
+2025-09-14 12:44:37,185 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:37,488 | INFO | RETRY(article) https://silkwayrally.com/vladimir-chagin-vystupil-na-vostochnom-ekonomicheskom-forume-2/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:38,201 | INFO | GET(article) https://silkwayrally.com/mediaotchyot-mezhdunarodnogo-ralli-shelkovyj-put-2025-itogi-yubilejnogo-izdaniya/ → 200 Content-Type=text/html
+2025-09-14 12:44:38,201 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:38,496 | INFO | RETRY(article) https://silkwayrally.com/mediaotchyot-mezhdunarodnogo-ralli-shelkovyj-put-2025-itogi-yubilejnogo-izdaniya/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:39,181 | INFO | GET(article) https://silkwayrally.com/kak-ustroena-press-sluzhba-shelkovogo-puti-zakulise-gonki-v-czifrah-i-faktah/ → 200 Content-Type=text/html
+2025-09-14 12:44:39,181 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:39,486 | INFO | RETRY(article) https://silkwayrally.com/kak-ustroena-press-sluzhba-shelkovogo-puti-zakulise-gonki-v-czifrah-i-faktah/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:40,131 | INFO | GET(article) https://silkwayrally.com/ralli-shelkovyj-put-istoriya-yubilejnogo-izdaniya/ → 200 Content-Type=text/html
+2025-09-14 12:44:40,131 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:40,433 | INFO | RETRY(article) https://silkwayrally.com/ralli-shelkovyj-put-istoriya-yubilejnogo-izdaniya/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:41,126 | INFO | GET(article) https://silkwayrally.com/ralli-shelkovyj-put-2025-goda-sportivnye-itogi/ → 200 Content-Type=text/html
+2025-09-14 12:44:41,126 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:41,437 | INFO | RETRY(article) https://silkwayrally.com/ralli-shelkovyj-put-2025-goda-sportivnye-itogi/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:41,869 | INFO | GET(article) https://silkwayrally.com/aleksandr-grishin-1978-2025/ → 200 Content-Type=text/html
+2025-09-14 12:44:41,869 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:42,150 | INFO | RETRY(article) https://silkwayrally.com/aleksandr-grishin-1978-2025/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:42,914 | INFO | GET(article) https://silkwayrally.com/torzhestvennyj-finish-ralli-shelkovyj-put-grandioznyj-prazdnik-v-gorno-altajske/ → 200 Content-Type=text/html
+2025-09-14 12:44:42,914 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:43,221 | INFO | RETRY(article) https://silkwayrally.com/torzhestvennyj-finish-ralli-shelkovyj-put-grandioznyj-prazdnik-v-gorno-altajske/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:43,787 | INFO | GET(article) https://silkwayrally.com/pozdravitelnoe-obrashhenie-prezidenta-raf-k-uchastnikam-ralli-shelkovyj-put-2025-goda/ → 200 Content-Type=text/html
+2025-09-14 12:44:43,787 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:44,090 | INFO | RETRY(article) https://silkwayrally.com/pozdravitelnoe-obrashhenie-prezidenta-raf-k-uchastnikam-ralli-shelkovyj-put-2025-goda/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:44,517 | INFO | GET(article) https://silkwayrally.com/11-j-etap-ralli-shelkovyj-put-2025-reshayushhie-kilometry/ → 200 Content-Type=text/html
+2025-09-14 12:44:44,518 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:44,822 | INFO | RETRY(article) https://silkwayrally.com/11-j-etap-ralli-shelkovyj-put-2025-reshayushhie-kilometry/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:45,402 | INFO | GET(article) https://silkwayrally.com/desyatyj-etap-ralli-shelkovyj-put-2025-pokidaya-mongoliyu/ → 200 Content-Type=text/html
+2025-09-14 12:44:45,402 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:45,704 | INFO | RETRY(article) https://silkwayrally.com/desyatyj-etap-ralli-shelkovyj-put-2025-pokidaya-mongoliyu/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:46,422 | INFO | GET(article) https://silkwayrally.com/devyatyj-etap-ralli-shelkovyj-put-2025-drama-za-dva-dnya-do-finisha/ → 200 Content-Type=text/html
+2025-09-14 12:44:46,423 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:46,732 | INFO | RETRY(article) https://silkwayrally.com/devyatyj-etap-ralli-shelkovyj-put-2025-drama-za-dva-dnya-do-finisha/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:47,167 | INFO | GET(article) https://silkwayrally.com/vosmoj-etap-ralli-shelkovyj-put-2025-ispytanie-zavhanom/ → 200 Content-Type=text/html
+2025-09-14 12:44:47,167 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:47,470 | INFO | RETRY(article) https://silkwayrally.com/vosmoj-etap-ralli-shelkovyj-put-2025-ispytanie-zavhanom/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:48,043 | INFO | GET(article) https://silkwayrally.com/sedmoj-etap-ralli-shelkovyj-put-2025-shibalov-operedil-vyazovicha/ → 200 Content-Type=text/html
+2025-09-14 12:44:48,044 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:48,354 | INFO | RETRY(article) https://silkwayrally.com/sedmoj-etap-ralli-shelkovyj-put-2025-shibalov-operedil-vyazovicha/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:48,786 | INFO | GET(article) https://silkwayrally.com/shestoj-etap-ralli-shelkovyj-put-2025-ekvator-marafona/ → 200 Content-Type=text/html
+2025-09-14 12:44:48,786 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:49,069 | INFO | RETRY(article) https://silkwayrally.com/shestoj-etap-ralli-shelkovyj-put-2025-ekvator-marafona/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:49,509 | INFO | GET(article) https://silkwayrally.com/pyatyj-etap-ralli-shelkovyj-put-2025-gonka-pod-ulan-batorom/ → 200 Content-Type=text/html
+2025-09-14 12:44:49,509 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:49,799 | INFO | RETRY(article) https://silkwayrally.com/pyatyj-etap-ralli-shelkovyj-put-2025-gonka-pod-ulan-batorom/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:50,567 | INFO | GET(article) https://silkwayrally.com/chetvyortyj-etap-ralli-shelkovyj-put-2025-skorostnaya-mongoliya/ → 200 Content-Type=text/html
+2025-09-14 12:44:50,567 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:50,872 | INFO | RETRY(article) https://silkwayrally.com/chetvyortyj-etap-ralli-shelkovyj-put-2025-skorostnaya-mongoliya/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:51,306 | INFO | GET(article) https://silkwayrally.com/tretij-etap-ralli-shelkovyj-put-2025-ispytaniya-nachinayutsya/ → 200 Content-Type=text/html
+2025-09-14 12:44:51,307 | INFO | Set beget=begetok cookie for domain silkwayrally.com
+2025-09-14 12:44:51,611 | INFO | RETRY(article) https://silkwayrally.com/tretij-etap-ralli-shelkovyj-put-2025-ispytaniya-nachinayutsya/ → 200 Content-Type=text/html; charset=UTF-8
+2025-09-14 12:44:51,631 | INFO | silkwayrally: 18 items, 18 fresh
+2025-09-14 12:44:51,631 | INFO | [2/2] BEGIN vdrifte (type=rss)
+2025-09-14 12:44:51,632 | INFO | Fetching RSS: vdrifte http://vdrifte.ru/rss
+2025-09-14 12:44:53,930 | INFO | vdrifte: 10 items, 10 fresh
+2025-09-14 12:44:53,930 | INFO | Will post 12 items
+2025-09-14 12:44:54,411 | INFO | HTTP Request: POST https://api.telegram.org/bot8356695305:AAFomhFL7UyVlVqGhRNKEVqGKQBg9WsWLpA/sendMessage "HTTP/1.1 200 OK"
+2025-09-14 12:44:55,757 | INFO | HTTP Request: POST https://api.telegram.org/bot8356695305:AAFomhFL7UyVlVqGhRNKEVqGKQBg9WsWLpA/sendMessage "HTTP/1.1 200 OK"
+2025-09-14 12:44:57,115 | INFO | HTTP Request: POST https://api.telegram.org/bot8356695305:AAFomhFL7UyVlVqGhRNKEVqGKQBg9WsWLpA/sendMessage "HTTP/1.1 200 OK"
+2025-09-14 12:44:58,468 | INFO | HTTP Request: POST https://api.telegram.org/bot8356695305:AAFomhFL7UyVlVqGhRNKEVqGKQBg9WsWLpA/sendMessage "HTTP/1.1 200 OK"
+2025-09-14 12:44:59,822 | INFO | HTTP Request: POST https://api.telegram.org/bot8356695305:AAFomhFL7UyVlVqGhRNKEVqGKQBg9WsWLpA/sendMessage "HTTP/1.1 200 OK"
+2025-09-14 12:45:01,295 | INFO | HTTP Request: POST https://api.telegram.org/bot8356695305:AAFomhFL7UyVlVqGhRNKEVqGKQBg9WsWLpA/sendMessage "HTTP/1.1 200 OK"
+2025-09-14 12:45:02,644 | INFO | HTTP Request: POST https://api.telegram.org/bot8356695305:AAFomhFL7UyVlVqGhRNKEVqGKQBg9WsWLpA/sendMessage "HTTP/1.1 200 OK"
+2025-09-14 12:45:03,997 | INFO | HTTP Request: POST https://api.telegram.org/bot8356695305:AAFomhFL7UyVlVqGhRNKEVqGKQBg9WsWLpA/sendMessage "HTTP/1.1 200 OK"
+2025-09-14 12:45:05,344 | INFO | HTTP Request: POST https://api.telegram.org/bot8356695305:AAFomhFL7UyVlVqGhRNKEVqGKQBg9WsWLpA/sendMessage "HTTP/1.1 200 OK"
+2025-09-14 12:45:06,750 | INFO | HTTP Request: POST https://api.telegram.org/bot8356695305:AAFomhFL7UyVlVqGhRNKEVqGKQBg9WsWLpA/sendMessage "HTTP/1.1 200 OK"
+2025-09-14 12:45:08,112 | INFO | HTTP Request: POST https://api.telegram.org/bot8356695305:AAFomhFL7UyVlVqGhRNKEVqGKQBg9WsWLpA/sendMessage "HTTP/1.1 200 OK"
+2025-09-14 12:45:09,638 | INFO | HTTP Request: POST https://api.telegram.org/bot8356695305:AAFomhFL7UyVlVqGhRNKEVqGKQBg9WsWLpA/sendMessage "HTTP/1.1 200 OK"
+2025-09-14 12:45:10,841 | INFO | Posted messages
+2025-09-14 12:45:10,844 | INFO | Updated state
+2025-09-14 12:45:10,844 | INFO | Log saved to logs/run-20250914-124433.log
+2025-09-14 12:45:10,844 | INFO | Done
